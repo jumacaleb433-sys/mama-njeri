@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mama Njeri's Kitchen</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 20px;
+            background-color: #e8ece4;
+            font-family: Georgia, "Times New Roman", serif;
+            color: #2e2a27;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background-color: #f7f5ee;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        /* Navigation bar */
+        nav {
+            background-color: #2f4a37;
+            color: #f6d66b;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav h3 {
+            margin: 0;
+            letter-spacing: 0.5px;
+        }
+
+        nav a {
+            color: #f6d66b;
+            text-decoration: none;
+            margin-left: 10px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Welcome banner */
+        .hero {
+            background:
+                linear-gradient(to right, rgba(192, 57, 43, 0.82), rgba(230, 126, 34, 0.78)),
+                url("https://images.unsplash.com/photo-1547592180-85f173990554?w=1200") center / cover,
+                #c0392b;
+            padding: 70px 15px;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h2 {
+            margin: 0 0 8px;
+            font-size: 1.9rem;
+        }
+
+        .hero p {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        /* Main content */
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+            padding: 22px;
+        }
+
+        .section {
+            border: 1px solid #d3d0c4;
+            border-radius: 10px;
+            padding: 14px;
+            background-color: #fffdf7;
+        }
+
+        h4 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            color: #2f4a37;
+        }
+
+        /* Menu table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th {
+            background-color: #f1c94e;
+            text-align: left;
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #d3d0c4;
+        }
+
+        /* Order form */
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 8px;
+            border: 1px solid #b5b2a6;
+            border-radius: 4px;
+            font-family: inherit;
+        }
+
+        button {
+            background-color: #2f4a37;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-family: inherit;
+        }
+
+        button:hover {
+            background-color: #1f3326;
+        }
+
+        /* Menu thumbnails */
+        td.photo {
+            width: 76px;
+            padding: 6px;
+        }
+
+        td.photo img {
+            display: block;
+            width: 60px;
+            height: 45px;
+            object-fit: cover;
+            border-radius: 6px;
+            background-color: #e8e4d6;
+        }
+
+        /* Gallery and contact */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+        }
+
+        .gallery.wide {
+            grid-column: 1 / -1;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 90px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #26302a;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        @media (max-width: 600px) {
+            .content {
+                grid-template-columns: 1fr;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <nav>
+        <h3>Mama Njeri's Kitchen</h3>
+
+        <div>
+            <a href="#menu">Menu</a> ·
+            <a href="#order">Order</a> ·
+            <a href="#visit">Visit</a>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <h2>Homemade Kenyan meals, served hot</h2>
+        <p>Cooked fresh every morning in the heart of Nairobi</p>
+    </div>
+
+    <div class="content">
+
+        <!-- Food menu -->
+        <div class="section" id="menu">
+            <h4>Our menu</h4>
+
+            <table>
+                <tr>
+                    <th></th>
+                    <th>Dish</th>
+                    <th>Price</th>
+                </tr>
+
+                <tr>
+                    <td class="photo"><img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=200" alt="Pilau"></td>
+                    <td>Pilau</td>
+                    <td>KES 350</td>
+                </tr>
+
+                <tr>
+                    <td class="photo"><img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=200" alt="Ugali and sukuma"></td>
+                    <td>Ugali & Sukuma</td>
+                    <td>KES 250</td>
+                </tr>
+
+                <tr>
+                    <td class="photo"><img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=200" alt="Chapati"></td>
+                    <td>Chapati (2)</td>
+                    <td>KES 100</td>
+                </tr>
+
+                <tr>
+                    <td class="photo"><img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=200" alt="Githeri"></td>
+                    <td>Githeri</td>
+                    <td>KES 200</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Order form -->
+        <div class="section" id="order">
+            <h4>Place an order</h4>
+
+            <form onsubmit="event.preventDefault(); alert('Thank you! Your order has been received.');">
+
+                <input type="text"
+                       placeholder="Your name"
+                       required>
+
+                <select required>
+                    <option value="Pilau">Pilau</option>
+                    <option value="Ugali & Sukuma">Ugali & Sukuma</option>
+                    <option value="Chapati">Chapati (2)</option>
+                    <option value="Githeri">Githeri</option>
+                </select>
+
+                <button type="submit">Send order</button>
+
+            </form>
+        </div>
+
+        <!-- Gallery -->
+        <div class="section gallery wide" style="display:block;">
+            <h4>From our kitchen</h4>
+
+            <div class="gallery">
+                <img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=300" alt="Kenyan food">
+                <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=300" alt="Fresh food">
+                <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=300" alt="Food plate">
+                <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=300" alt="Home-cooked meal">
+                <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=300" alt="Plated dish">
+                <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=300" alt="Fresh from the kitchen">
+            </div>
+        </div>
+
+        <!-- Opening hours -->
+        <div class="section" id="visit">
+            <h4>Opening hours and contact</h4>
+
+            <p>Monday - Saturday: 8:00 AM - 9:00 PM</p>
+            <p>Sunday: 10:00 AM - 6:00 PM</p>
+            <p>Location: Nairobi, Kenya</p>
+            <p>Phone: 0712 345 678</p>
+        </div>
+
+    </div>
+
+    <footer>
+        © 2026 Mama Njeri's Kitchen
+    </footer>
+
+</div>
+
+</body>
+</html>
